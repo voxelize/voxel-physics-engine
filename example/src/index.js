@@ -11,7 +11,8 @@ import {
   DoubleSide,
 } from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-import { AABB, Engine } from '../../dist';
+import { Engine } from '../../dist';
+import { AABB } from '@voxelize/voxel-aabb';
 
 const scene = new Scene();
 const camera = new PerspectiveCamera();

@@ -1,4 +1,4 @@
-import { AABB } from './aabb';
+import { AABB } from '@voxelize/voxel-aabb';
 import { RigidBody } from './rigid-body';
 import { sweep } from './sweep';
 
@@ -440,6 +440,5 @@ export class Engine {
   };
 }
 
-export * from './aabb';
 export * from './rigid-body';
 export * from './sweep';

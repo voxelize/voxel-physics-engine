@@ -1,5 +1,5 @@
 import { Engine } from '.';
-import { AABB } from './aabb';
+import { AABB } from '@voxelize/voxel-aabb';
 
 function lineToPlane(unit: number[], vector: number[], normal: number[]) {
   const [ux, uy, uz] = unit;

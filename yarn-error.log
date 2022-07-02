@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /Users/ianhuang/.yarn/bin/yarn.js add -D @types/tiny-tween-js
+  /usr/local/bin/node /Users/ianhuang/.yarn/bin/yarn.js add @voxelize/aabb
 
 PATH: 
   /usr/local/opt/ncurses/bin:/Users/ianhuang/.yarn/bin:/Users/ianhuang/.config/yarn/global/node_modules/.bin:/Users/ianhuang/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.8/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:/opt/X11/bin:~/.dotnet/tools:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/ianhuang/.cargo/bin:/Users/ianhuang/.fig/bin:/Users/ianhuang/.local/bin
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@types%2ftiny-tween-js: Not found
+  Error: https://registry.yarnpkg.com/@voxelize%2faabb: Not found
       at params.callback [as _callback] (/Users/ianhuang/.yarn/lib/cli.js:67029:18)
       at self.callback (/Users/ianhuang/.yarn/lib/cli.js:140883:22)
       at Request.emit (node:events:527:28)
@@ -29,7 +29,7 @@ Trace:
 npm manifest: 
   {
     "name": "@voxelize/voxel-physics-engine",
-    "version": "1.1.13",
+    "version": "1.1.22",
     "files": [
       "dist"
     ],
