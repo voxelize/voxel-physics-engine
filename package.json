@@ -1,5 +1,5 @@
 {
-  "name": "@voxelize/voxel-physics-engine",
+  "name": "@voxelize/physics-engine",
   "version": "1.1.24",
   "files": [
     "dist"
@@ -22,8 +22,8 @@
     "prepublishOnly": "yarn run build",
     "start": "webpack serve --config example/webpack.config.js"
   },
-  "repository": "https://github.com/shaoruu/voxel-physics-engine.git",
-  "author": "Ian Huang <21ianh1@students.tas.tw>",
+  "repository": "https://github.com/voxelize/voxel-physics-engine.git",
+  "author": "Ian Huang <ian1314159@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "@voxelize/voxel-aabb": "^1.0.0",
