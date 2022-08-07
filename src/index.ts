@@ -167,8 +167,7 @@ export class Engine {
     body.impulses = [0, 0, 0];
 
     // cache old position for use in autostepping
-    let tmpBox: AABB;
-    tmpBox = body.aabb.clone();
+    const tmpBox: AABB = body.aabb.clone();
 
     // sweeps aabb along dx and accounts for collisions
     this.processCollisions(body.aabb, dx, body.resting);
@@ -348,7 +347,7 @@ export class Engine {
 
     const y = body.aabb.minY;
 
-    let maxStep: number = 0;
+    let maxStep = 0;
 
     if (voxel) {
       const aabbs = this.getVoxel(voxel[0], voxel[1], voxel[2]);
@@ -378,13 +377,20 @@ export class Engine {
       targetPos[2] - oldBox.minZ,
     ];
     leftover[1] = 0;
-
     const tmpResting = [0, 0, 0];
     this.processCollisions(oldBox, leftover, tmpResting);
 
     // bail if no movement happened in the originally blocked direction
     if (xBlocked && !approxEquals(oldBox.minX, targetPos[0])) return;
     if (zBlocked && !approxEquals(oldBox.minZ, targetPos[2])) return;
+
+    // move down a bit to avoid stepping too high, bail on collision
+    const temp = oldBox.clone();
+    sweep(this.getVoxel, temp, [0, -yDist, 0], (dist) => {
+      if (dist > Engine.EPSILON)
+        oldBox.translate([0, -dist + Engine.EPSILON, 0]);
+      return true;
+    });
 
     // done - oldBox is now at the target autostepped position
 
